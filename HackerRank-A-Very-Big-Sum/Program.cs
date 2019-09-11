@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 
 namespace HackerRank_A_Very_Big_Sum
 {
@@ -21,7 +22,21 @@ namespace HackerRank_A_Very_Big_Sum
         }
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            TextWriter textWriter = new StreamWriter(@System.Environment.GetEnvironmentVariable("OUTPUT_PATH"), true);
+
+            int arCount = Convert.ToInt32(Console.ReadLine());
+
+            long[] ar = Array.ConvertAll(Console.ReadLine().Split(' '), arTemp => Convert.ToInt64(arTemp))
+            ;
+            long result = AVeryBigSum(ar);
+
+            textWriter.WriteLine(result);
+
+            textWriter.Flush();
+            textWriter.Close();
+
+            Console.Read();
         }
+    }
     }
 }
