@@ -16,6 +16,8 @@ namespace HackerRank_A_Very_Big_Sum
                 sum += ar[i];
             }
 
+            return sum;
+
         }
         static void Main(string[] args)
         {
