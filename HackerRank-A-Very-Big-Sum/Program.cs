@@ -22,21 +22,21 @@ namespace HackerRank_A_Very_Big_Sum
         }
         static void Main(string[] args)
         {
-            TextWriter textWriter = new StreamWriter(@System.Environment.GetEnvironmentVariable("OUTPUT_PATH"), true);
+            using (TextWriter textWriter = new StreamWriter("~/HackerRank-A-Very-Big-Sum", true))
+            {
+                int arCount = Convert.ToInt32(Console.ReadLine());
 
-            int arCount = Convert.ToInt32(Console.ReadLine());
+                long[] ar = Array.ConvertAll(Console.ReadLine().Split(' '), arTemp => Convert.ToInt64(arTemp));
 
-            long[] ar = Array.ConvertAll(Console.ReadLine().Split(' '), arTemp => Convert.ToInt64(arTemp))
-            ;
-            long result = AVeryBigSum(ar);
+                long result = AVeryBigSum(ar);
 
-            textWriter.WriteLine(result);
+                textWriter.WriteLine(result);
 
-            textWriter.Flush();
-            textWriter.Close();
+                textWriter.Flush();
+                textWriter.Close();
+            }   
 
             Console.Read();
         }
-    }
     }
 }
