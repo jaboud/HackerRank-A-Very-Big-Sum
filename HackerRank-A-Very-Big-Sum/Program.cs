@@ -22,7 +22,7 @@ namespace HackerRank_A_Very_Big_Sum
         }
         static void Main(string[] args)
         {
-            using (TextWriter textWriter = new StreamWriter("~/HackerRank-A-Very-Big-Sum", true))
+            using (TextWriter textWriter = new StreamWriter("OUTPUT_PATH", true))
             {
                 int arCount = Convert.ToInt32(Console.ReadLine());
 
